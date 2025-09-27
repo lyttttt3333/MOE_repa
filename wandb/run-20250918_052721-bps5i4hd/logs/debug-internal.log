@@ -1,0 +1,11 @@
+{"time":"2025-09-18T05:27:21.714867303Z","level":"INFO","msg":"stream: starting","core version":"0.21.3"}
+{"time":"2025-09-18T05:27:21.918856064Z","level":"INFO","msg":"stream: created new stream","id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:21.918879375Z","level":"INFO","msg":"stream: started","id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:21.918888444Z","level":"INFO","msg":"sender: started","stream_id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:21.918887453Z","level":"INFO","msg":"handler: started","stream_id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:21.918904369Z","level":"INFO","msg":"writer: started","stream_id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:31.058133472Z","level":"INFO","msg":"stream: closing","id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:31.450868912Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-18T05:27:31.595963654Z","level":"INFO","msg":"handler: closed","stream_id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:31.596054979Z","level":"INFO","msg":"sender: closed","stream_id":"bps5i4hd"}
+{"time":"2025-09-18T05:27:31.596076477Z","level":"INFO","msg":"stream: closed","id":"bps5i4hd"}

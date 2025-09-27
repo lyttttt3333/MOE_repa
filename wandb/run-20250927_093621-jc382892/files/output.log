@@ -1,0 +1,29 @@
+Steps:   0%|                                                                        | 1/400000 [00:03<335:01:53,  3.02s/it][[34m2025-09-27 09:36:28[0m] Generating EMA samples done.
+Steps:   0%|                          | 22/400000 [00:09<18:13:39,  6.10it/s, grad_norm=0.745, loss=1.51, proj_loss=-0.331]Traceback (most recent call last):
+  File "/home/yitongli/REPA/train.py", line 457, in <module>
+    main(args)
+  File "/home/yitongli/REPA/train.py", line 321, in main
+    accelerator.backward(loss)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/accelerate/accelerator.py", line 2730, in backward
+    self.scaler.scale(loss).backward(**kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/_tensor.py", line 647, in backward
+    torch.autograd.backward(
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yitongli/REPA/train.py", line 457, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/home/yitongli/REPA/train.py", line 321, in main
+[rank0]:     accelerator.backward(loss)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/accelerate/accelerator.py", line 2730, in backward
+[rank0]:     self.scaler.scale(loss).backward(**kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/_tensor.py", line 647, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]: KeyboardInterrupt

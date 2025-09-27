@@ -1,0 +1,68 @@
+Steps:   0%|                                                                                    | 0/400000 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/yitongli/REPA/train.py", line 457, in <module>
+    main(args)
+  File "/home/yitongli/REPA/train.py", line 315, in main
+    loss, proj_loss = loss_fn(model, x, model_kwargs, zs=zs)
+  File "/home/yitongli/REPA/loss.py", line 77, in __call__
+    model_output, zs_tilde  = model(model_input, time_input.flatten(), **model_kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/accelerate/utils/operations.py", line 818, in forward
+    return model_forward(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/accelerate/utils/operations.py", line 806, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/home/yitongli/REPA/models/sit.py", line 319, in forward
+    x = block(x, c)                      # (N, T, D)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/yitongli/REPA/models/sit.py", line 161, in forward
+    x = x + gate_mlp.unsqueeze(1) * ffn_output
+RuntimeError: The size of tensor a (32) must match the size of tensor b (16) at non-singleton dimension 2
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yitongli/REPA/train.py", line 457, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/home/yitongli/REPA/train.py", line 315, in main
+[rank0]:     loss, proj_loss = loss_fn(model, x, model_kwargs, zs=zs)
+[rank0]:   File "/home/yitongli/REPA/loss.py", line 77, in __call__
+[rank0]:     model_output, zs_tilde  = model(model_input, time_input.flatten(), **model_kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1648, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1474, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank0]:     return model_forward(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank0]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/home/yitongli/REPA/models/sit.py", line 319, in forward
+[rank0]:     x = block(x, c)                      # (N, T, D)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yitongli/REPA/models/sit.py", line 161, in forward
+[rank0]:     x = x + gate_mlp.unsqueeze(1) * ffn_output
+[rank0]: RuntimeError: The size of tensor a (32) must match the size of tensor b (16) at non-singleton dimension 2

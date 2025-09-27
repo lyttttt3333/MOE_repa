@@ -1,0 +1,14 @@
+Steps:   0%|          | 1/400000 [00:01<215:10:37,  1.94s/it][[34m2025-09-08 12:22:38[0m] Generating EMA samples done.
+Steps:   2%|▎         | 10000/400000 [52:39<33:41:24,  3.22it/s, grad_norm=0.384, loss=0.796, proj_loss=-0.649][[34m2025-09-08 13:15:16[0m] Generating EMA samples done.
+Steps:   5%|▌         | 20000/400000 [1:45:19<32:50:36,  3.21it/s, grad_norm=0.393, loss=0.77, proj_loss=-0.684][[34m2025-09-08 14:07:56[0m] Generating EMA samples done.
+Steps:   8%|▊         | 30000/400000 [2:37:59<32:12:58,  3.19it/s, grad_norm=0.265, loss=0.714, proj_loss=-0.693][[34m2025-09-08 15:00:37[0m] Generating EMA samples done.
+Steps:  10%|█         | 40000/400000 [3:30:39<31:09:08,  3.21it/s, grad_norm=0.207, loss=0.632, proj_loss=-0.698][[34m2025-09-08 15:53:16[0m] Generating EMA samples done.
+Steps:  12%|█▎        | 50000/400000 [4:23:26<30:18:41,  3.21it/s, grad_norm=0.361, loss=0.567, proj_loss=-0.703][[34m2025-09-08 16:46:08[0m] Saved checkpoint to exps/linear-dinov2-b-enc8/checkpoints/0050000.pt
+[[34m2025-09-08 16:46:13[0m] Generating EMA samples done.
+Steps:  15%|█▌        | 60000/400000 [5:16:17<29:26:06,  3.21it/s, grad_norm=0.29, loss=0.478, proj_loss=-0.726][[34m2025-09-08 17:38:55[0m] Generating EMA samples done.
+Steps:  18%|█▊        | 70000/400000 [6:08:59<28:34:49,  3.21it/s, grad_norm=0.239, loss=0.434, proj_loss=-0.71][[34m2025-09-08 18:31:36[0m] Generating EMA samples done.
+Steps:  20%|██        | 80000/400000 [7:01:41<27:40:45,  3.21it/s, grad_norm=0.346, loss=0.411, proj_loss=-0.72][[34m2025-09-08 19:24:18[0m] Generating EMA samples done.
+Steps:  22%|██▎       | 90000/400000 [7:54:22<26:49:09,  3.21it/s, grad_norm=0.256, loss=0.378, proj_loss=-0.734][[34m2025-09-08 20:16:59[0m] Generating EMA samples done.
+Steps:  25%|██▌       | 100000/400000 [8:47:03<25:57:07,  3.21it/s, grad_norm=0.268, loss=0.391, proj_loss=-0.723][[34m2025-09-08 21:09:45[0m] Saved checkpoint to exps/linear-dinov2-b-enc8/checkpoints/0100000.pt
+[[34m2025-09-08 21:09:50[0m] Generating EMA samples done.
+Steps:  27%|██▋       | 109210/400000 [9:35:43<25:10:17,  3.21it/s, grad_norm=0.482, loss=0.358, proj_loss=-0.726] 

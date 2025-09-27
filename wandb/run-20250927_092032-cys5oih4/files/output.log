@@ -1,0 +1,2 @@
+Steps:   0%|                                                                        | 1/400000 [00:06<681:52:32,  6.14s/it][[34m2025-09-27 09:20:43[0m] Generating EMA samples done.
+Steps:   0%|                          | 37/400000 [00:20<29:39:57,  3.75it/s, grad_norm=0.768, loss=1.37, proj_loss=-0.346]

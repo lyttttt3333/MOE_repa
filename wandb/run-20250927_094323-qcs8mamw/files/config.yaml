@@ -1,0 +1,183 @@
+_wandb:
+    value:
+        cli_version: 0.21.3
+        e:
+            l66jwexfj3xzr4323fhctqewj0mav7fu:
+                args:
+                    - --report-to=wandb
+                    - --allow-tf32
+                    - --mixed-precision=fp16
+                    - --seed=0
+                    - --path-type=linear
+                    - --prediction=v
+                    - --weighting=uniform
+                    - --model=SiT-B/2
+                    - --enc-type=dinov2-vit-b
+                    - --proj-coeff=0.5
+                    - --encoder-depth=8
+                    - --output-dir=exps
+                    - --exp-name=linear-dinov2-b-enc8
+                    - --data-dir=preprocessing/repa_data
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 48
+                cpu_count_logical: 96
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "2079114358784"
+                        used: "721957478400"
+                email: liyitong.thu@gmail.com
+                executable: /home/yitongli/miniconda3/envs/repa/bin/python3.10
+                git:
+                    commit: 67f714503e3892f993844aab088ffc5791c92613
+                    remote: https://github.com/sihyun-yu/REPA.git
+                gpu: NVIDIA A100-SXM4-80GB
+                gpu_count: 8
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-7b555cf4-118a-d519-c3ba-7cc359b57061
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-fbf55e19-cd6e-7391-8984-c3874eadb281
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-a092b2b8-820b-0add-9c56-7458bb9708b2
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-c2899ddc-f4f4-0f1f-fd26-260566d8ac64
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-7e494f54-64a2-4711-806a-b58db2105c7a
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-6f1d952c-eef5-e1cd-c3a0-ff1c465669db
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-f2b1fc30-cece-b590-904e-10509210d205
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-a661c37d-677f-2025-258f-0daa0e6e7f6f
+                host: ip-172-31-1-247
+                memory:
+                    total: "1204521443328"
+                os: Linux-6.8.0-1028-aws-x86_64-with-glibc2.39
+                program: /home/yitongli/REPA/train.py
+                python: CPython 3.10.18
+                root: /home/yitongli/REPA
+                startedAt: "2025-09-27T09:43:23.045165Z"
+                writerId: l66jwexfj3xzr4323fhctqewj0mav7fu
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 63
+                - 71
+                - 83
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 63
+                - 71
+                - 83
+            "3":
+                - 13
+                - 61
+            "4": 3.10.18
+            "5": 0.21.3
+            "6": 4.56.1
+            "12": 0.21.3
+            "13": linux-x86_64
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+adam_weight_decay:
+    value: 0
+allow_tf32:
+    value: true
+batch_size:
+    value: 256
+cfg_prob:
+    value: 0.1
+checkpointing_steps:
+    value: 50000
+data_dir:
+    value: preprocessing/repa_data
+enc_type:
+    value: dinov2-vit-b
+encoder_depth:
+    value: 8
+epochs:
+    value: 1400
+exp_name:
+    value: linear-dinov2-b-enc8
+fused_attn:
+    value: true
+gradient_accumulation_steps:
+    value: 1
+learning_rate:
+    value: 0.0001
+legacy:
+    value: false
+logging_dir:
+    value: logs
+max_grad_norm:
+    value: 1
+max_train_steps:
+    value: 400000
+mixed_precision:
+    value: fp16
+model:
+    value: SiT-B/2
+num_classes:
+    value: 1000
+num_workers:
+    value: 4
+output_dir:
+    value: exps
+path_type:
+    value: linear
+prediction:
+    value: v
+proj_coeff:
+    value: 0.5
+qk_norm:
+    value: false
+report_to:
+    value: wandb
+resolution:
+    value: 256
+resume_step:
+    value: 0
+sampling_steps:
+    value: 10000
+seed:
+    value: 0
+weighting:
+    value: uniform

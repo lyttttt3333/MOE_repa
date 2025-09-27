@@ -1,0 +1,13 @@
+Steps:   0%|                                                                        | 1/400000 [00:03<337:32:12,  3.04s/it][[34m2025-09-27 09:53:17[0m] Generating EMA samples done.
+Steps:   0%|                             | 38/400000 [00:16<23:41:49,  4.69it/s, grad_norm=13, loss=1.57, proj_loss=-0.321]Traceback (most recent call last):
+  File "/home/yitongli/REPA/train.py", line 459, in <module>
+    main(args)
+  File "/home/yitongli/REPA/train.py", line 373, in main
+    "loss": accelerator.gather(loss_mean).mean().detach().item(),
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yitongli/REPA/train.py", line 459, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/home/yitongli/REPA/train.py", line 373, in main
+[rank0]:     "loss": accelerator.gather(loss_mean).mean().detach().item(),
+[rank0]: KeyboardInterrupt

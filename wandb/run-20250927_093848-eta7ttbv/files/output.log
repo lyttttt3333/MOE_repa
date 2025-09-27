@@ -1,0 +1,41 @@
+Steps:   0%|                                                                        | 1/400000 [00:02<278:06:02,  2.50s/it][[34m2025-09-27 09:38:55[0m] Generating EMA samples done.
+Steps:   0%|                            | 1/400000 [00:06<278:06:02,  2.50s/it, grad_norm=1.41, loss=1.7, proj_loss=0.0155]Traceback (most recent call last):
+  File "/home/yitongli/REPA/train.py", line 457, in <module>
+    main(args)
+  File "/home/yitongli/REPA/train.py", line 315, in main
+    loss, proj_loss = loss_fn(model, x, model_kwargs, zs=zs)
+  File "/home/yitongli/REPA/loss.py", line 77, in __call__
+    model_output, zs_tilde  = model(model_input, time_input.flatten(), **model_kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1644, in forward
+    inputs, kwargs = self._pre_forward(*inputs, **kwargs)
+  File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1533, in _pre_forward
+    if torch.is_grad_enabled() and self.reducer._rebuild_buckets():
+RuntimeError: Expected to have finished reduction in the prior iteration before starting a new one. This error indicates that your module has parameters that were not used in producing loss. You can enable unused parameter detection by passing the keyword argument `find_unused_parameters=True` to `torch.nn.parallel.DistributedDataParallel`, and by
+making sure all `forward` function outputs participate in calculating loss.
+If you already have done the above, then the distributed data parallel module wasn't able to locate the output tensors in the return value of your module's `forward` function. Please include the loss function and the structure of the return value of `forward` of your module when reporting this issue (e.g. list, dict, iterable).
+Parameter indices which did not receive grad for rank 0: 17 18 29 30 41 42 53 54 65 66 77 78 89 90 101 102 113 114 125 126 137 138 149 150
+ In addition, you can set the environment variable TORCH_DISTRIBUTED_DEBUG to either INFO or DETAIL to print out information about which particular parameters did not receive gradient on this rank as part of this error
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yitongli/REPA/train.py", line 457, in <module>
+[rank0]:     main(args)
+[rank0]:   File "/home/yitongli/REPA/train.py", line 315, in main
+[rank0]:     loss, proj_loss = loss_fn(model, x, model_kwargs, zs=zs)
+[rank0]:   File "/home/yitongli/REPA/loss.py", line 77, in __call__
+[rank0]:     model_output, zs_tilde  = model(model_input, time_input.flatten(), **model_kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1644, in forward
+[rank0]:     inputs, kwargs = self._pre_forward(*inputs, **kwargs)
+[rank0]:   File "/home/yitongli/miniconda3/envs/repa/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1533, in _pre_forward
+[rank0]:     if torch.is_grad_enabled() and self.reducer._rebuild_buckets():
+[rank0]: RuntimeError: Expected to have finished reduction in the prior iteration before starting a new one. This error indicates that your module has parameters that were not used in producing loss. You can enable unused parameter detection by passing the keyword argument `find_unused_parameters=True` to `torch.nn.parallel.DistributedDataParallel`, and by
+[rank0]: making sure all `forward` function outputs participate in calculating loss.
+[rank0]: If you already have done the above, then the distributed data parallel module wasn't able to locate the output tensors in the return value of your module's `forward` function. Please include the loss function and the structure of the return value of `forward` of your module when reporting this issue (e.g. list, dict, iterable).
+[rank0]: Parameter indices which did not receive grad for rank 0: 17 18 29 30 41 42 53 54 65 66 77 78 89 90 101 102 113 114 125 126 137 138 149 150
+[rank0]:  In addition, you can set the environment variable TORCH_DISTRIBUTED_DEBUG to either INFO or DETAIL to print out information about which particular parameters did not receive gradient on this rank as part of this error
